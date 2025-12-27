@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iRunnn</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="Background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="container">
+        
+        <h1>iRunnn</h1>
+        <p class="bio">Fivem | Enthusiast</p>
+
+        <div class="discord-status" id="discord-card">
+            <div class="discord-avatar-container">
+                <img id="discord-icon" src="https://via.placeholder.com/50" class="discord-avatar">
+                <div id="status-dot" class="status-dot offline"></div>
+            </div>
+            <div>
+                <div id="discord-name" style="font-weight: bold;">Loading...</div>
+                <div id="discord-activity" style="font-size: 12px; opacity: 0.7;">Sedang offline</div>
+                
+            </div>
+            <div id="badge-container" class="badge-container">
+        </div>
+             <div id="spotify-card" class="spotify-container" >
+        <div class="spotify-info">
+            <img id="spotify-album-art" src="" alt="Album Art" class="album-art">
+            <div class="spotify-details">
+                <div class="spotify-title">
+                    <i class="fa-brands fa-spotify" style="color: #670000;"></i> 
+                    <span id="spotify-song">Song Title</span>
+                </div>
+                <div id="spotify-artist" class="spotify-artist">Artist Name</div>
+                
+                <div class="progress-container">
+                    <div id="spotify-progress" class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+       
+
+        <div class="links">
+            <div class="divider">
+            <span>Fivem Stuff Order</span>
+            </div>
+            <a href="https://discord.gg/ktnUHEuhR3" class="link-item" target="_blank">
+                <i class="fa-solid fa-cart-shopping"></i> Warkop D 
+            </a>
+            <a href="https://discord.gg/gSWMcavFhM" class="link-item" target="_blank">
+                <i class="fa-solid fa-cart-shopping"></i> Alt server | DFAMS ONTOPs
+            </a>
+        </div>
+    </div>
+
+   <script src="config.js"></script>
+</body>
+</html>
