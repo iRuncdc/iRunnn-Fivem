@@ -19,49 +19,53 @@
     </div>
     <div class="container">
         
-        <h1>iRunnn</h1>
-        <p class="bio">Fivem | Enthusiast</p>
+        <div class="profile-header">
+            <div class="avatar-wrapper">
+                <img id="discord-avatar" src="" alt="Avatar" class="profile-img">
+                <div id="status-dot" class="status-dot"></div>
+            </div>
+            <h1 id="display-name">iRunnn</h1>
+            
+            <div class="roles-container">
+                <span class="role-tag">Fivem | Enthusiast</span>
+            </div>
+
+            <div id="badge-container" class="badge-container"></div>
+        </div>
 
           
 
-        <div class="discord-status" id="discord-card">
-            
-            <div class="discord-avatar-container">
-                <img id="discord-icon" src="https://via.placeholder.com/50" class="discord-avatar">
-                <div id="status-dot" class="status-dot offline"></div>
-            </div>
-            <div>
-                <div id="discord-name" style="font-weight: bold;">Loading...</div>
-                <div id="discord-activity" style="font-size: 12px; opacity: 0.7;">Sedang offline</div>
-                
-            </div>
-            <div id="badge-container" class="badge-container">
-                 
+       <div id="activity-card" class="activity-container" style="display: none;">
+    <div class="activity-content">
+        <div class="activity-image-wrapper">
+            <img id="activity-icon" src="" alt="Game Icon" class="activity-icon">
+            <img id="activity-small-asset" src="" class="activity-small-asset" style="display: none;">
         </div>
-             
+        <div class="activity-details">
+            <div class="status-label">Activity</div>
+            <div id="activity-name" class="activity-name">Nama Game</div>
+            <div id="activity-state" class="activity-state">Detail Status</div>
+            <div id="activity-details" class="activity-details-text">Detail Tambahan</div>
         </div>
-        
-    <div id="spotify-card" class="spotify-container" >
-        <div class="divider">
-            <span>Listening to</span>
-            
-            </div>
-        <div class="spotify-info">
-            <img id="spotify-album-art" src="" alt="Album Art" class="album-art">
-            <div class="spotify-details">
-                <div class="spotify-title">
-                    <i class="fa-brands fa-spotify" style="color: #670000;"></i> 
-                    <span id="spotify-song">Song Title</span>
-                </div>
-                <div id="spotify-artist" class="spotify-artist">Artist Name</div>
-                
-                <div class="progress-container">
-                    <div id="spotify-progress" class="progress-bar"></div>
-                </div>
+    </div>
+</div>
+<br>
+<div id="spotify-card" class="card-container spotify-theme" style="display: none;">
+    <div class="card-content">
+        <div class="img-wrapper">
+            <img id="spotify-album-art" src="" class="main-img spin">
+        </div>
+        <div class="details">
+            <div class="status-label">Listening to:</div>
+            <div id="spotify-song" class="title-text">Judul Lagu</div>
+            <div id="spotify-artist" class="sub-text">Nama Artis</div>
+            <div class="progress-bar-bg">
+                <div id="spotify-progress" class="progress-bar-fill"></div>
             </div>
         </div>
     </div>
-    <hr>
+</div>
+  
 
         <div class="links">
             <div class="divider">
