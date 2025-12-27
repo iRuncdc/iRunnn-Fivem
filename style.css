@@ -1,0 +1,192 @@
+ :root {
+            --primary-color: #ffffff;
+            --bg-overlay: rgba(0, 0, 0, 0.6);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a; /* Ganti dengan URL gambar/video jika ingin */
+            background-image: url('https://w0.peakpx.com/wallpaper/593/164/HD-wallpaper-anime-aesthetic-dark.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background: rgba(109, 1, 1, 0.192); /* Background hijau transparan khas Spotify */
+            border: 1px solid rgba(255, 0, 0, 0.411);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        h1 { margin: 10px 0; font-size: 24px; }
+        .bio { opacity: 0.8; font-size: 14px; margin-bottom: 20px; }
+
+        /* Discord Status Style */
+        .discord-status {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .discord-avatar-container { position: relative; }
+        .discord-avatar { width: 50px; height: 50px; border-radius: 50%; }
+        .status-dot {
+            width: 15px; height: 15px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0; right: 0;
+            border: 2px solid #121212;
+        }
+
+        .links { display: flex; flex-direction: column; gap: 10px; }
+        .link-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 12px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+        .link-item:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
+
+        /* Status Colors */
+        .online { background: #43b581; }
+        .idle { background: #faa61a; }
+        .dnd { background: #f04747; }
+        .offline { background: #747f8d; }
+        .spotify-container {
+    background: rgba(109, 1, 1, 0.1); /* Background hijau transparan khas Spotify */
+    border: 1px solid rgba(255, 0, 0, 0.411);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 15px;
+    margin-top: 15px;
+    transition: all 0.5s ease;
+}
+
+    .spotify-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .album-art {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        animation: pulse 2s infinite ease-in-out;
+    }
+
+    .spotify-details {
+        flex: 1;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    .spotify-title {
+        font-weight: bold;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .spotify-artist {
+        font-size: 12px;
+        opacity: 0.8;
+        margin-top: 4px;
+    }
+
+    /* Progress Bar Style */
+    .progress-container {
+        width: 100%;
+        height: 4px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 2px;
+        margin-top: 10px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background: #670000;
+        border-radius: 2px;
+        width: 0%; /* Diupdate via JS */
+        transition: width 1s linear;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    /* Container Video */
+    .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Berada di belakang konten */
+        overflow: hidden;
+    }
+
+    #bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Video akan menutupi seluruh layar */
+    }
+
+    /* Overlay Hitam 85% */
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.507); /* 0.85 = 85% opacity */
+        z-index: 1;
+    }
+
+    /* Pastikan container utama berada di atas video */
+    .container {
+        position: relative;
+        z-index: 2;
+        /* Sisanya biarkan seperti sebelumnya */
+    }
